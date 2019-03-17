@@ -1,0 +1,11 @@
+%hl Hello #{@name}
+%form
+  %p Enter your name
+  %input{:type => "text", :name => :visitor_name}
+  %input{:type => "submit", :value => "Sign In"}
+  
+%p Previous visitors:
+
+%ul
+  -@entries.each do |entry|
+    %li= entry.name
